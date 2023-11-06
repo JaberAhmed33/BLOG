@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import styles from "./write.module.css";
 import Image from "next/image";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -13,8 +12,10 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
+import dynamic from "next/dynamic";
 
 export default function Write() {
+  const ReactQuill = dynamic(() => import("react-quill"), {ssr: false});
   const [file, setFile] = useState(null);
   const [url, setUrl] = useState("");
   const [open, setOpen] = useState(false);

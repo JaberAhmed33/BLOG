@@ -1,8 +1,8 @@
 import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import AuthLinks from '../authLinks/AuthLinks';
-import ThemeToggle from '../themeToggle/ThemeToggle';
+import AuthLinks from './../authLinks/AuthLinks';
+import ThemeToggle from './../themeToggle/ThemeToggle';
 
 export default function Navbar() {
   return (
