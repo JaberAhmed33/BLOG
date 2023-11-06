@@ -13,6 +13,7 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_SECRET,
     })
   ],
+  secret: 'allah-akber' 
 };
 
 export const getAuthSession = () => getServerSession(authOptions);
